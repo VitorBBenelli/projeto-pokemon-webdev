@@ -1,4 +1,116 @@
+/*cores variaveis*/
+:root {
+    --cor-primaria: #aba9d9;
+    --cor-destaque: #6b77a1;
+}
+
 /*navbar*/
-.navbar-spaces{
-    padding: 3%;
+.navbar{
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    padding-top: 5%;
+    
+}
+
+.navbar-brand{
+    color: var(--cor-primaria);
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    
+}
+.navbar-brand:hover{
+    background-color: var(--cor-primaria);
+    border-radius: 15px;
+}
+.nav-item1, .nav-item3{
+    background-color: var(--cor-primaria);
+    position: absolute;
+}
+.nav-item3{
+    right: 0.3%;
+}
+.nav-item1{
+    left: 0.3%;
+}
+
+.nav-item1, .nav-item3{
+    border-radius: 5px;
+    top: 5%;
+}
+/*titulo-superior*/
+.container-top{
+    background-image: linear-gradient(to left, #073359, rgba(0, 0, 0, 0.76)), url("image/packImagensLugia/image/packImagensLugia/0acfce52295861b63b7db211e0ba5414-removebg-preview.png");
+    
+}
+.tittle, .resumo-baixo-titulo{
+    color: var(--cor-primaria);
+}
+.tittle{
+    font-size: 8em;
+    padding-top: 10%;
+    position: relative;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 25%;
+    width: max-content;
+    z-index: 1;
+    
+}
+/*barra em baixa do titulo*/
+/*.tittle{
+    background-image: linear-gradient(to left, #6b77a1, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.tittle:hover{
+    color: #aba9d9;
+}*/
+.tittle::after{
+    content: '';
+    background: linear-gradient(to left, #e2e4f1, var(--cor-destaque));
+    position: absolute;
+    height: 4%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius:15px ;
+    z-index: -2;
+    transition: 1s;
+}
+.tittle:hover::after{
+    left: -10%;
+    height: 55%;
+    width: 118%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, white, var(--cor-destaque));
+    border: linear-gradient(90deg, #e2e4f1, var(--cor-destaque));
+}
+.tittle::before{
+    transition: 4s;
+    content: "";
+    position: absolute;
+    bottom: 2.4%;
+    left: -8%;
+    height: 50%;
+    width: 114%;
+    background: transparent;
+    border-radius: 120px;
+    z-index: -1;
+}
+.tittle:hover::before {
+    height: 50%;
+    width: 114%;
+    left: -8%;
+    background: black;
+}
+
+.resumo-baixo-titulo{
+    text-align: center;
+    font-size: 1.5rem;
+    
 }
